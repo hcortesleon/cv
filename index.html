@@ -1,279 +1,114 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>CV Hugo Antonio Cortés León - Cartógrafo</title>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    body {
-        background-color: #e2e8f0;
-        font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
-        line-height: 1.45;
-        padding: 40px 20px;
-        color: #1e293b;
-    }
-    .cv-container {
-        max-width: 1000px;
-        margin: 0 auto;
-        background-color: #ffffff;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        border-radius: 12px;
-        overflow: hidden;
-    }
-    /* HEADER */
-    .header {
-        background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
-        color: white;
-        padding: 35px 40px;
-    }
-    .header h1 {
-        font-size: 38px;
-        font-weight: 600;
-        letter-spacing: 1px;
-        margin-bottom: 8px;
-        font-family: 'Cambria', 'Georgia', serif;
-    }
-    .header .subtitle {
-        font-size: 18px;
-        opacity: 0.9;
-        border-left: 3px solid #7cb8e8;
-        padding-left: 15px;
-        margin-top: 8px;
-    }
-    .contact-bar {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 25px;
-        margin-top: 20px;
-        font-size: 14px;
-        border-top: 1px solid rgba(255,255,255,0.2);
-        padding-top: 18px;
-	overflow-x:auto;
-    }
-    .contact-bar span {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-    }
-    /* 2 columnas */
-    .two-col {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .sidebar {
-        width: 33%;
-        background-color: #f8fafc;
-        padding: 30px 25px;
-        border-right: 1px solid #e2e8f0;
-    }
-    .main-content {
-        width: 67%;
-        padding: 30px 30px 30px 25px;
-    }
-    /* elementos */
-    .section {
-        margin-bottom: 28px;
-    }
-    .section-title {
-        font-size: 18px;
-        font-weight: 700;
-        color: #1e3a5f;
-        border-left: 4px solid #2c5282;
-        padding-left: 12px;
-        margin-bottom: 15px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-family: 'Cambria', 'Georgia', serif;
-    }
-    .skill-list {
-        list-style: none;
-    }
-    .skill-list li {
-        margin-bottom: 10px;
-        padding-left: 5px;
-        position: relative;
-        font-size: 14px;
-    }
-    .skill-list li::before {
-        content: "▹";
-        color: #2c5282;
-        font-weight: bold;
-        margin-right: 8px;
-    }
-    .job {
-        margin-bottom: 22px;
-    }
-    .job-header {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin-bottom: 6px;
-    }
-    .job-title {
-        font-weight: 700;
-        font-size: 16px;
-        color: #0f172a;
-    }
-    .job-company {
-        font-weight: 600;
-        color: #2c5282;
-    }
-    .job-date {
-        font-size: 13px;
-        color: #5b6e8c;
-    }
-    .job-desc {
-        margin-top: 8px;
-        padding-left: 18px;
-    }
-    .job-desc li {
-        font-size: 14px;
-        margin-bottom: 5px;
-    }
-    .edu-item, .cert-item {
-        margin-bottom: 14px;
-    }
-    .edu-title {
-        font-weight: 700;
-        font-size: 15px;
-    }
-    .edu-place {
-        font-size: 13px;
-        color: #334155;
-    }
-    .refs {
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-        margin-top: 10px;
-    }
-    .ref-card {
-        background: white;
-        padding: 12px;
-        border-radius: 12px;
-        border: 1px solid #e2e8f0;
-    }
-    hr {
-        margin: 12px 0;
-        border: 0;
-        height: 1px;
-        background: #e2e8f0;
-    }
-    @media (max-width: 700px) {
-        .sidebar, .main-content { width: 100%; }
-        .sidebar { border-right: none; border-bottom: 1px solid #e2e8f0; }
-    }
-</style>
-</head>
 <body>
-<div class="cv-container">
-    <div class="header">
-        <h1>Hugo Antonio Cortés León</h1>
-        <div class="subtitle">Cartógrafo | Especialista en Infraestructura Geoespacial</div>
-        <div class="contact-bar">
-            <span>📧 hcortesleon@gmail.com</span>
-            <span>📱 <a href="https://wa.me/56966324274" target="_blank" style="color:white;">+569 6632 4274 (WhatsApp)</a></span>
-            <span>📍 Puente Alto, Santiago, Chile</span>
-            <span>🔗 linkedin.com/in/hcortesleon</span>
-	    <span>🌐 <a href="https://hcortesleon.cl" target="_blank" style="color:white;">hcortesleon.cl</a></span>
-        </div>
-    </div>
-    <div class="two-col">
-        <div class="sidebar">
-            <div class="section">
-                <div class="section-title">Perfil</div>
-                <p style="font-size:14px; line-height:1.45;">Cartógrafo con Licenciatura en Ciencias Cartográficas (UTEM). Experiencia en sector público y privado, gestión de datos geoespaciales, normas ISO 19100, y capacitaciones. Comprometido, proactivo y en constante actualización.</p>
-            </div>
-            <div class="section">
-                <div class="section-title">Habilidades</div>
-                <ul class="skill-list">
-                    <li>Desarrollo SIG (Sistemas de Información Geográfica)</li>
-                    <li>Normas Chilenas ISO 19100</li>
-                    <li>Geodatabase Enterprise / PostGIS / GeoServer</li>
-                    <li>ArcGIS Enterprise / ArcGIS Online</li>
-                    <li>Leaflet, Web App Builder, servicios ESRI</li>
-                    <li>ArcPy / Automatización geoespacial</li>
-                </ul>
-            </div>
-            <div class="section">
-                <div class="section-title">Capacitaciones</div>
-                <ul class="skill-list" style="margin-top:0">
-                    <li>Linux (24h) – 2023</li>
-                    <li>Capacitación Pedagógica – 2021</li>
-                    <li>ArcGIS API JS (24h) – 2018</li>
-                    <li>Python Geoprocesamiento (24h) – 2016</li>
-                    <li>ArcGIS Server (24h) – 2015</li>
-                    <li>Building Geodatabase (24h) – Esri Chile</li>
-                </ul>
-            </div>
-        </div>
-        <div class="main-content">
-            <div class="section">
-                <div class="section-title">Experiencia</div>
-                <div class="job">
-                    <div class="job-header"><span class="job-title">Administrador Base Datos Geoespacial</span><span class="job-date">12/2016 – actual</span></div>
-                    <div class="job-company">Servicio Aerofotogramétrico (SAF)</div>
-                    <ul class="job-desc">
-                        <li>Administración Geodatabase y ArcGIS Enterprise</li>
-                        <li>PostGIS / GeoServer · instalación software GIS</li>
-                        <li>Enlace GIS – TI · Profesor Geoinformática</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <div class="job-header"><span class="job-title">GIS Manager</span><span class="job-date">03/2016 – 12/2016</span></div>
-                    <div class="job-company">Geoxite</div>
-                    <ul class="job-desc">
-                        <li>Analista GIS · Geoprocesos ArcPy</li>
-                        <li>ArcGIS Server y Geodatabase Enterprise</li>
-                        <li>Representante en Comité CL010 (ISO-TC211) – Información Geográfica</li>
-                    </ul>
-                </div>
-                <div class="job">
-                    <div class="job-header"><span class="job-title">Cartógrafo</span><span class="job-date">02/2015 – 03/2016</span></div>
-                    <div class="job-company">Esri Chile</div>
-                    <ul class="job-desc">
-                        <li>Proyecto interoperatividad (BBDD geoespaciales + ArcGIS Server IGM-SHOA-SAF-EMCO)</li>
-                        <li>Representante en Comité CL010 (ISO-TC211)</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="section">
-                <div class="section-title">Educación</div>
-                <div class="edu-item"><span class="edu-title">Licenciado en Ciencias Cartográficas (2014)</span><br><span class="edu-place">Universidad Tecnológica Metropolitana</span></div>
-                <div class="edu-item"><span class="edu-title">Diplomado Python and Data Science (2025)</span><br><span class="edu-place">Universidad Autónoma de Chile</span></div>
-                <div class="edu-item"><span class="edu-title">Diplomado Ciencia e Ingeniería de Datos (2025)</span><br><span class="edu-place">Universidad de las Américas</span></div>
-            </div>
-            <div class="section">
-                <div class="section-title">Referencias</div>
-                <div class="refs">
-                    <div class="ref-card"><strong>Giovanni Albornoz Pinto</strong><br>Jefe Depto. Tecnologías de la Información del Servicio Aerofotogramétrico de Chile (SAF)<br>📞 +569 4478 8625</div>
-                    <div class="ref-card"><strong>Etienne Araya</strong><br>CEO Geoxite Spa – Consultoría GIS<br>📞 +569 7767 2449</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <div style="max-width: 1000px; margin: 0 auto 15px auto; text-align: right;">
+        <button onclick="descargarPDF()" style="padding: 11px 22px; background-color: #2b83ba; color: white; border: none; border-radius: 8px; font-weight: bold; font-size: 14px; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: background 0.2s;">
+            📥 Descargar versión PDF
+        </button>
+    </div>
+
+    <div class="cv-container">
+        <div class="header">
+            <h1>Hugo Antonio Cortés León</h1>
+            <div class="subtitle">Cartógrafo | Especialista en Infraestructura Geoespacial</div>
+            <div class="contact-bar">
+                <span>📧 hcortesleon@gmail.com</span>
+                <span>📱 <a href="https://wa.me/56966324274" target="_blank" style="color:white;">+569 6632 4274 (WhatsApp)</a></span>
+                <span>📍 Puente Alto, Santiago, Chile</span>
+                <span>🔗 linkedin.com/in/hcortesleon</span>
+                <span>🌐 <a href="https://hcortesleon.cl" target="_blank" style="color:white;">hcortesleon.cl</a></span>
+            </div>
+        </div>
+        <div class="two-col">
+            <div class="sidebar">
+                <div class="section">
+                    <div class="section-title">Perfil</div>
+                    <p style="font-size:14px; line-height:1.45;">Cartógrafo con Licenciatura en Ciencias Cartográficas (UTEM). Experiencia en sector público y privado, gestión de datos geoespaciales, normas ISO 19100, y capacitaciones. Comprometido, proactivo y en constante actualización.</p>
+                </div>
+                <div class="section">
+                    <div class="section-title">Habilidades</div>
+                    <ul class="skill-list">
+                        <li>Desarrollo SIG (Sistemas de Información Geográfica)</li>
+                        <li>Normas Chilenas ISO 19100</li>
+                        <li>Geodatabase Enterprise / PostGIS / GeoServer</li>
+                        <li>ArcGIS Enterprise / ArcGIS Online</li>
+                        <li>Leaflet, Web App Builder, servicios ESRI</li>
+                        <li>ArcPy / Automatización geoespacial</li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <div class="section-title">Capacitaciones</div>
+                    <ul class="skill-list" style="margin-top:0">
+                        <li>Linux (24h) – 2023</li>
+                        <li>Capacitación Pedagógica – 2021</li>
+                        <li>ArcGIS API JS (24h) – 2018</li>
+                        <li>Python Geoprocesamiento (24h) – 2016</li>
+                        <li>ArcGIS Server (24h) – 2015</li>
+                        <li>Building Geodatabase (24h) – Esri Chile</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="section">
+                    <div class="section-title">Experiencia</div>
+                    <div class="job">
+                        <div class="job-header"><span class="job-title">Administrador Base Datos Geoespacial</span><span class="job-date">12/2016 – actual</span></div>
+                        <div class="job-company">Servicio Aerofotogramétrico (SAF)</div>
+                        <ul class="job-desc">
+                            <li>Administración Geodatabase and ArcGIS Enterprise</li>
+                            <li>PostGIS / GeoServer · instalación software GIS</li>
+                            <li>Enlace GIS – TI · Profesor Geoinformática</li>
+                        </ul>
+                    </div>
+                    <div class="job">
+                        <div class="job-header"><span class="job-title">GIS Manager</span><span class="job-date">03/2016 – 12/2016</span></div>
+                        <div class="job-company">Geoxite</div>
+                        <ul class="job-desc">
+                            <li>Analista GIS · Geoprocesos ArcPy</li>
+                            <li>ArcGIS Server y Geodatabase Enterprise</li>
+                            <li>Representante en Comité CL010 (ISO-TC211) – Información Geográfica</li>
+                        </ul>
+                    </div>
+                    <div class="job">
+                        <div class="job-header"><span class="job-title">Cartógrafo</span><span class="job-date">02/2015 – 03/2016</span></div>
+                        <div class="job-company">Esri Chile</div>
+                        <ul class="job-desc">
+                            <li>Proyecto interoperatividad (BBDD geoespaciales + ArcGIS Server IGM-SHOA-SAF-EMCO)</li>
+                            <li>Representante en Comité CL010 (ISO-TC211)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section">
+                    <div class="section-title">Educación</div>
+                    <div class="edu-item"><span class="edu-title">Licenciado en Ciencias Cartográficas (2014)</span><br><span class="edu-place">Universidad Tecnológica Metropolitana</span></div>
+                    <div class="edu-item"><span class="edu-title">Diplomado Python and Data Science (2025)</span><br><span class="edu-place">Universidad Autónoma de Chile</span></div>
+                    <div class="edu-item"><span class="edu-title">Diplomado Ciencia e Ingeniería de Datos (2025)</span><br><span class="edu-place">Universidad de las Américas</span></div>
+                </div>
+                <div class="section">
+                    <div class="section-title">Referencias</div>
+                    <div class="refs">
+                        <div class="ref-card"><strong>Giovanni Albornoz Pinto</strong><br>Jefe Depto. Tecnologías de la Información del Servicio Aerofotogramétrico de Chile (SAF)<br>📞 +569 4478 8625</div>
+                        <div class="ref-card"><strong>Etienne Araya</strong><br>CEO Geoxite Spa – Consultoría GIS<br>📞 +569 7767 2449</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
     function descargarPDF() {
-        const elemento = document.body; // Convierte toda la página actual a PDF
+        // Apuntamos solo a la tarjeta blanca del CV, ignorando el botón y el fondo gris externo
+        const elemento = document.querySelector('.cv-container'); 
+        
         const opciones = {
-            margin:       0.5,
+            margin:       0, // Al ser un contenedor estructurado, 0 evita páginas en blanco extra
             filename:     'CV_Hugo_Cortes.pdf',
             image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2 },
+            html2canvas:  { scale: 2, useCORS: true }, 
             jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
         };
+        
         html2pdf().set(opciones).from(elemento).save();
     }
     </script>
-
-	
 </body>
-
-</html>
