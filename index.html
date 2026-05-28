@@ -1,29 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Hugo Antonio Cortés León</title>
+    <style>
+        /* Estilos generales y fondo */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ecef;
+            color: #333;
+            margin: 0;
+            padding: 20px 10px;
+        }
+
+        /* Contenedor del Botón */
+        .download-btn-container {
+            max-width: 900px;
+            margin: 0 auto 20px auto;
+            text-align: right;
+        }
+
+        .btn-descarga {
+            padding: 12px 24px;
+            background-color: #2b83ba;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.2s ease-in-out;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-descarga:hover {
+            background-color: #1e628f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Contenedor principal del CV (Formato A4 aproximado) */
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Encabezado */
+        .header {
+            background-color: #2b83ba;
+            color: white;
+            padding: 35px 40px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.4em;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            font-weight: 300;
+            margin-bottom: 20px;
+            color: #e0f2fe;
+        }
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px 25px;
+            font-size: 0.95em;
+        }
+        .contact-bar span {
+            display: flex;
+            align-items: center;
+        }
+        .contact-bar a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .contact-bar a:hover {
+            text-decoration: underline;
+            opacity: 0.9;
+        }
+
+        /* Estructura de Columnas */
+        .two-col {
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* Barra lateral izquierda */
+        .sidebar {
+            width: 35%;
+            background-color: #f8fafc;
+            padding: 35px 30px;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        /* Contenido principal derecho */
+        .main-content {
+            width: 65%;
+            padding: 35px 40px;
+        }
+
+        /* Títulos de Secciones */
+        .section {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-size: 1.3em;
+            color: #2b83ba;
+            border-bottom: 2px solid #2b83ba;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Listas y viñetas */
+        .skill-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .skill-list li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 8px;
+        }
+        .skill-list li::before {
+            content: "▪";
+            color: #2b83ba;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+            line-height: 1;
+        }
+
+        /* Experiencia Laboral */
+        .job {
+            margin-bottom: 25px;
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+        .job-title {
+            font-weight: bold;
+            font-size: 1.15em;
+            color: #1e293b;
+        }
+        .job-date {
+            font-size: 0.9em;
+            color: #64748b;
+            font-weight: 600;
+        }
+        .job-company {
+            font-size: 1em;
+            color: #0ea5e9;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .job-desc {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #475569;
+        }
+
+        /* Educación */
+        .edu-item {
+            margin-bottom: 18px;
+        }
+        .edu-title {
+            font-weight: bold;
+            font-size: 15px;
+            color: #1e293b;
+        }
+        .edu-place {
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        /* Referencias */
+        .refs {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        .ref-card {
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #2b83ba;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #334155;
+        }
+
+        /* Diseño Responsive (Móviles) */
+        @media (max-width: 768px) {
+            .two-col {
+                flex-direction: column;
+            }
+            .sidebar, .main-content {
+                width: auto;
+                border-right: none;
+            }
+            .sidebar {
+                border-bottom: 1px solid #e2e8f0;
+            }
+            .job-header {
+                flex-direction: column;
+            }
+            .job-date {
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
 <body>
 
-    <div style="max-width: 1000px; margin: 0 auto 15px auto; text-align: right;">
-        <button onclick="descargarPDF()" style="padding: 11px 22px; background-color: #2b83ba; color: white; border: none; border-radius: 8px; font-weight: bold; font-size: 14px; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: background 0.2s;">
+    <!-- Contenedor del botón independiente del CV -->
+    <div class="download-btn-container">
+        <button class="btn-descarga" onclick="descargarPDF()">
             📥 Descargar versión PDF
         </button>
     </div>
 
+    <!-- Contenedor principal que se transformará en PDF -->
     <div class="cv-container">
         <div class="header">
             <h1>Hugo Antonio Cortés León</h1>
             <div class="subtitle">Cartógrafo | Especialista en Infraestructura Geoespacial</div>
             <div class="contact-bar">
                 <span>📧 hcortesleon@gmail.com</span>
-                <span>📱 <a href="https://wa.me/56966324274" target="_blank" style="color:white;">+569 6632 4274 (WhatsApp)</a></span>
+                <span>📱 <a href="https://wa.me/56966324274" target="_blank">+569 6632 4274</a></span>
                 <span>📍 Puente Alto, Santiago, Chile</span>
-                <span>🔗 linkedin.com/in/hcortesleon</span>
-                <span>🌐 <a href="https://hcortesleon.cl" target="_blank" style="color:white;">hcortesleon.cl</a></span>
+                <span>🔗 <a href="https://linkedin.com/in/hcortesleon" target="_blank">linkedin.com/in/hcortesleon</a></span>
+                <span>🌐 <a href="https://hcortesleon.cl" target="_blank">hcortesleon.cl</a></span>
             </div>
         </div>
+        
         <div class="two-col">
             <div class="sidebar">
                 <div class="section">
                     <div class="section-title">Perfil</div>
-                    <p style="font-size:14px; line-height:1.45;">Cartógrafo con Licenciatura en Ciencias Cartográficas (UTEM). Experiencia en sector público y privado, gestión de datos geoespaciales, normas ISO 19100, y capacitaciones. Comprometido, proactivo y en constante actualización.</p>
+                    <p style="font-size:14px; line-height:1.6; text-align: justify; color: #475569;">
+                        Cartógrafo con Licenciatura en Ciencias Cartográficas (UTEM). Experiencia en sector público y privado, gestión de datos geoespaciales, normas ISO 19100, y capacitaciones. Comprometido, proactivo y en constante actualización.
+                    </p>
                 </div>
+                
                 <div class="section">
                     <div class="section-title">Habilidades</div>
                     <ul class="skill-list">
@@ -35,6 +277,7 @@
                         <li>ArcPy / Automatización geoespacial</li>
                     </ul>
                 </div>
+                
                 <div class="section">
                     <div class="section-title">Capacitaciones</div>
                     <ul class="skill-list" style="margin-top:0">
@@ -47,68 +290,103 @@
                     </ul>
                 </div>
             </div>
+            
             <div class="main-content">
                 <div class="section">
-                    <div class="section-title">Experiencia</div>
+                    <div class="section-title">Experiencia Laboral</div>
+                    
                     <div class="job">
-                        <div class="job-header"><span class="job-title">Administrador Base Datos Geoespacial</span><span class="job-date">12/2016 – actual</span></div>
+                        <div class="job-header">
+                            <span class="job-title">Administrador Base Datos Geoespacial</span>
+                            <span class="job-date">12/2016 – actual</span>
+                        </div>
                         <div class="job-company">Servicio Aerofotogramétrico (SAF)</div>
                         <ul class="job-desc">
-                            <li>Administración Geodatabase and ArcGIS Enterprise</li>
-                            <li>PostGIS / GeoServer · instalación software GIS</li>
-                            <li>Enlace GIS – TI · Profesor Geoinformática</li>
+                            <li>Administración Geodatabase y ArcGIS Enterprise.</li>
+                            <li>Administración e instalación de PostGIS / GeoServer y software GIS.</li>
+                            <li>Enlace entre las áreas GIS y TI. Profesor de Geoinformática.</li>
                         </ul>
                     </div>
+                    
                     <div class="job">
-                        <div class="job-header"><span class="job-title">GIS Manager</span><span class="job-date">03/2016 – 12/2016</span></div>
+                        <div class="job-header">
+                            <span class="job-title">GIS Manager</span>
+                            <span class="job-date">03/2016 – 12/2016</span>
+                        </div>
                         <div class="job-company">Geoxite</div>
                         <ul class="job-desc">
-                            <li>Analista GIS · Geoprocesos ArcPy</li>
-                            <li>ArcGIS Server y Geodatabase Enterprise</li>
-                            <li>Representante en Comité CL010 (ISO-TC211) – Información Geográfica</li>
+                            <li>Analista GIS y desarrollo de geoprocesos mediante ArcPy.</li>
+                            <li>Gestión de ArcGIS Server y Geodatabase Enterprise.</li>
+                            <li>Representante en Comité CL010 (ISO-TC211) – Información Geográfica.</li>
                         </ul>
                     </div>
+                    
                     <div class="job">
-                        <div class="job-header"><span class="job-title">Cartógrafo</span><span class="job-date">02/2015 – 03/2016</span></div>
+                        <div class="job-header">
+                            <span class="job-title">Cartógrafo</span>
+                            <span class="job-date">02/2015 – 03/2016</span>
+                        </div>
                         <div class="job-company">Esri Chile</div>
                         <ul class="job-desc">
-                            <li>Proyecto interoperatividad (BBDD geoespaciales + ArcGIS Server IGM-SHOA-SAF-EMCO)</li>
-                            <li>Representante en Comité CL010 (ISO-TC211)</li>
+                            <li>Proyecto de interoperatividad (BBDD geoespaciales + ArcGIS Server IGM-SHOA-SAF-EMCO).</li>
+                            <li>Representante en Comité CL010 (ISO-TC211).</li>
                         </ul>
                     </div>
                 </div>
+                
                 <div class="section">
                     <div class="section-title">Educación</div>
-                    <div class="edu-item"><span class="edu-title">Licenciado en Ciencias Cartográficas (2014)</span><br><span class="edu-place">Universidad Tecnológica Metropolitana</span></div>
-                    <div class="edu-item"><span class="edu-title">Diplomado Python and Data Science (2025)</span><br><span class="edu-place">Universidad Autónoma de Chile</span></div>
-                    <div class="edu-item"><span class="edu-title">Diplomado Ciencia e Ingeniería de Datos (2025)</span><br><span class="edu-place">Universidad de las Américas</span></div>
+                    <div class="edu-item">
+                        <span class="edu-title">Licenciado en Ciencias Cartográficas (2014)</span><br>
+                        <span class="edu-place">Universidad Tecnológica Metropolitana (UTEM)</span>
+                    </div>
+                    <div class="edu-item">
+                        <span class="edu-title">Diplomado Python and Data Science (2025)</span><br>
+                        <span class="edu-place">Universidad Autónoma de Chile</span>
+                    </div>
+                    <div class="edu-item">
+                        <span class="edu-title">Diplomado Ciencia e Ingeniería de Datos (2025)</span><br>
+                        <span class="edu-place">Universidad de las Américas</span>
+                    </div>
                 </div>
+                
                 <div class="section">
                     <div class="section-title">Referencias</div>
                     <div class="refs">
-                        <div class="ref-card"><strong>Giovanni Albornoz Pinto</strong><br>Jefe Depto. Tecnologías de la Información del Servicio Aerofotogramétrico de Chile (SAF)<br>📞 +569 4478 8625</div>
-                        <div class="ref-card"><strong>Etienne Araya</strong><br>CEO Geoxite Spa – Consultoría GIS<br>📞 +569 7767 2449</div>
+                        <div class="ref-card">
+                            <strong>Giovanni Albornoz Pinto</strong><br>
+                            Jefe Depto. Tecnologías de la Información, SAF<br>
+                            📞 +569 4478 8625
+                        </div>
+                        <div class="ref-card">
+                            <strong>Etienne Araya</strong><br>
+                            CEO Geoxite Spa – Consultoría GIS<br>
+                            📞 +569 7767 2449
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Librería para el PDF -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
     function descargarPDF() {
-        // Apuntamos solo a la tarjeta blanca del CV, ignorando el botón y el fondo gris externo
+        // Seleccionamos solo el contenedor del CV
         const elemento = document.querySelector('.cv-container'); 
         
         const opciones = {
-            margin:       0, // Al ser un contenedor estructurado, 0 evita páginas en blanco extra
+            margin:       [0, 0, 0, 0], 
             filename:     'CV_Hugo_Cortes.pdf',
             image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2, useCORS: true }, 
-            jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+            html2canvas:  { scale: 2, useCORS: true, letterRendering: true }, 
+            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
         };
         
+        // Ejecutar la generación del PDF
         html2pdf().set(opciones).from(elemento).save();
     }
     </script>
 </body>
+</html>
