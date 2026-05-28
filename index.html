@@ -17,18 +17,18 @@
         /* Contenedor del Botón */
         .download-btn-container {
             max-width: 900px;
-            margin: 0 auto 20px auto;
+            margin: 0 auto 15px auto;
             text-align: right;
         }
 
         .btn-descarga {
-            padding: 12px 24px;
+            padding: 11px 22px;
             background-color: #2b83ba;
             color: white;
             border: none;
             border-radius: 8px;
             font-weight: bold;
-            font-size: 15px;
+            font-size: 14px;
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: all 0.2s ease-in-out;
@@ -39,11 +39,10 @@
 
         .btn-descarga:hover {
             background-color: #1e628f;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            transform: translateY(-1px);
         }
 
-        /* Contenedor principal del CV (Formato A4 aproximado) */
+        /* Contenedor principal del CV (Ajustado para optimizar altura en PDF) */
         .cv-container {
             max-width: 900px;
             margin: 0 auto;
@@ -53,30 +52,30 @@
             overflow: hidden;
         }
 
-        /* Encabezado */
+        /* Encabezado optimizado en espacio */
         .header {
             background-color: #2b83ba;
             color: white;
-            padding: 35px 40px;
+            padding: 25px 30px;
             text-align: center;
         }
         .header h1 {
-            margin: 0 0 10px 0;
-            font-size: 2.4em;
+            margin: 0 0 5px 0;
+            font-size: 2.2em;
             letter-spacing: 1px;
         }
         .subtitle {
-            font-size: 1.2em;
+            font-size: 1.15em;
             font-weight: 300;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             color: #e0f2fe;
         }
         .contact-bar {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px 25px;
-            font-size: 0.95em;
+            gap: 10px 20px;
+            font-size: 0.9em;
         }
         .contact-bar span {
             display: flex;
@@ -85,11 +84,9 @@
         .contact-bar a {
             color: white;
             text-decoration: none;
-            transition: opacity 0.2s;
         }
         .contact-bar a:hover {
             text-decoration: underline;
-            opacity: 0.9;
         }
 
         /* Estructura de Columnas */
@@ -98,30 +95,33 @@
             flex-direction: row;
         }
 
-        /* Barra lateral izquierda */
+        /* Barra lateral izquierda compactada */
         .sidebar {
             width: 35%;
             background-color: #f8fafc;
-            padding: 35px 30px;
+            padding: 25px 20px;
             border-right: 1px solid #e2e8f0;
         }
 
-        /* Contenido principal derecho */
+        /* Contenido principal derecho compactado */
         .main-content {
             width: 65%;
-            padding: 35px 40px;
+            padding: 25px 30px;
         }
 
-        /* Títulos de Secciones */
-        .section {
-            margin-bottom: 30px;
+        /* Reglas Críticas para el PDF: Evitan cortes extraños */
+        .section, .job, .ref-card, .edu-item {
+            page-break-inside: avoid; /* Para navegadores antiguos */
+            break-inside: avoid;      /* Estándar moderno */
+            margin-bottom: 20px;
         }
+
         .section-title {
-            font-size: 1.3em;
+            font-size: 1.25em;
             color: #2b83ba;
             border-bottom: 2px solid #2b83ba;
-            padding-bottom: 8px;
-            margin-bottom: 15px;
+            padding-bottom: 5px;
+            margin-bottom: 12px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -132,88 +132,89 @@
             list-style-type: none;
             padding: 0;
             margin: 0;
-            font-size: 14px;
-            line-height: 1.6;
+            font-size: 13.5px;
+            line-height: 1.5;
         }
         .skill-list li {
             position: relative;
-            padding-left: 18px;
-            margin-bottom: 8px;
+            padding-left: 15px;
+            margin-bottom: 6px;
         }
         .skill-list li::before {
             content: "▪";
             color: #2b83ba;
             position: absolute;
             left: 0;
-            font-size: 1.2em;
-            line-height: 1;
+            font-size: 1.1em;
         }
 
         /* Experiencia Laboral */
         .job {
-            margin-bottom: 25px;
+            margin-bottom: 15px;
         }
         .job-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
         .job-title {
             font-weight: bold;
-            font-size: 1.15em;
+            font-size: 1.1em;
             color: #1e293b;
         }
         .job-date {
-            font-size: 0.9em;
+            font-size: 0.85em;
             color: #64748b;
             font-weight: 600;
+            white-space: nowrap;
         }
         .job-company {
-            font-size: 1em;
+            font-size: 0.95em;
             color: #0ea5e9;
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
         .job-desc {
             margin: 0;
-            padding-left: 20px;
-            font-size: 14px;
-            line-height: 1.6;
+            padding-left: 18px;
+            font-size: 13.5px;
+            line-height: 1.5;
             color: #475569;
         }
 
         /* Educación */
         .edu-item {
-            margin-bottom: 18px;
+            margin-bottom: 12px;
         }
         .edu-title {
             font-weight: bold;
-            font-size: 15px;
+            font-size: 14px;
             color: #1e293b;
         }
         .edu-place {
-            font-size: 14px;
+            font-size: 13px;
             color: #64748b;
         }
 
-        /* Referencias */
+        /* Referencias estructuradas en paralelo para ahorrar espacio vertical */
         .refs {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
         }
         .ref-card {
             background: #f1f5f9;
-            padding: 15px;
-            border-radius: 8px;
+            padding: 12px;
+            border-radius: 6px;
             border-left: 4px solid #2b83ba;
-            font-size: 14px;
-            line-height: 1.5;
+            font-size: 13px;
+            line-height: 1.4;
             color: #334155;
+            margin-bottom: 0; /* Controlado por el grid */
         }
 
-        /* Diseño Responsive (Móviles) */
+        /* Diseño Responsive (Móviles) - No afecta al PDF */
         @media (max-width: 768px) {
             .two-col {
                 flex-direction: column;
@@ -225,25 +226,26 @@
             .sidebar {
                 border-bottom: 1px solid #e2e8f0;
             }
+            .refs {
+                grid-template-columns: 1fr;
+            }
             .job-header {
                 flex-direction: column;
             }
             .job-date {
-                margin-top: 5px;
+                margin-top: 2px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Contenedor del botón independiente del CV -->
     <div class="download-btn-container">
         <button class="btn-descarga" onclick="descargarPDF()">
             📥 Descargar versión PDF
         </button>
     </div>
 
-    <!-- Contenedor principal que se transformará en PDF -->
     <div class="cv-container">
         <div class="header">
             <h1>Hugo Antonio Cortés León</h1>
@@ -261,7 +263,7 @@
             <div class="sidebar">
                 <div class="section">
                     <div class="section-title">Perfil</div>
-                    <p style="font-size:14px; line-height:1.6; text-align: justify; color: #475569;">
+                    <p style="font-size:13.5px; line-height:1.5; text-align: justify; color: #475569; margin: 0;">
                         Cartógrafo con Licenciatura en Ciencias Cartográficas (UTEM). Experiencia en sector público y privado, gestión de datos geoespaciales, normas ISO 19100, y capacitaciones. Comprometido, proactivo y en constante actualización.
                     </p>
                 </div>
@@ -278,9 +280,9 @@
                     </ul>
                 </div>
                 
-                <div class="section">
+                <div class="section" style="margin-bottom: 0;">
                     <div class="section-title">Capacitaciones</div>
-                    <ul class="skill-list" style="margin-top:0">
+                    <ul class="skill-list">
                         <li>Linux (24h) – 2023</li>
                         <li>Capacitación Pedagógica – 2021</li>
                         <li>ArcGIS API JS (24h) – 2018</li>
@@ -321,7 +323,7 @@
                         </ul>
                     </div>
                     
-                    <div class="job">
+                    <div class="job" style="margin-bottom: 0;">
                         <div class="job-header">
                             <span class="job-title">Cartógrafo</span>
                             <span class="job-date">02/2015 – 03/2016</span>
@@ -344,13 +346,13 @@
                         <span class="edu-title">Diplomado Python and Data Science (2025)</span><br>
                         <span class="edu-place">Universidad Autónoma de Chile</span>
                     </div>
-                    <div class="edu-item">
+                    <div class="edu-item" style="margin-bottom: 0;">
                         <span class="edu-title">Diplomado Ciencia e Ingeniería de Datos (2025)</span><br>
                         <span class="edu-place">Universidad de las Américas</span>
                     </div>
                 </div>
                 
-                <div class="section">
+                <div class="section" style="margin-bottom: 0;">
                     <div class="section-title">Referencias</div>
                     <div class="refs">
                         <div class="ref-card">
@@ -369,22 +371,20 @@
         </div>
     </div>
 
-    <!-- Librería para el PDF -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script>
     function descargarPDF() {
-        // Seleccionamos solo el contenedor del CV
         const elemento = document.querySelector('.cv-container'); 
         
         const opciones = {
-            margin:       [0, 0, 0, 0], 
+            margin:       0, 
             filename:     'CV_Hugo_Cortes.pdf',
             image:        { type: 'jpeg', quality: 0.98 },
             html2canvas:  { scale: 2, useCORS: true, letterRendering: true }, 
-            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' },
+            pagebreak:    { mode: ['avoid-all', 'css'] } // Forzar al script a respetar las reglas CSS anti-corte
         };
         
-        // Ejecutar la generación del PDF
         html2pdf().set(opciones).from(elemento).save();
     }
     </script>
